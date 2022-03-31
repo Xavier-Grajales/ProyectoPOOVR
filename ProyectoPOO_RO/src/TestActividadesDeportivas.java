@@ -1,12 +1,10 @@
 /**
- * Creado: 27 mar. 2022
+ * Creado: 31 mar. 2022
  */
 
 /**
- * @author xavier
- *
+ * @author Xavier Grajales y Rogelio García.
  */
-
 public class TestActividadesDeportivas {
     /**
     * @param args
@@ -16,16 +14,47 @@ public class TestActividadesDeportivas {
     //CREAR OBJETOS DE TIPO PersonaDTO
     
         //Constructor default
-        CatalogoDTO raqueta= new CatalogoDTO();
+        PersonaDTO Juan = new PersonaDTO ();
     
-        //Constructor con 4 parametros
-        CatalogoDTO pelota=new CatalogoDTO("C2179",'C', 45.50f, 3);
-        //Constructor con 5 parametros
-        CatalogoDTO balon=new CatalogoDTO("A2767",'A',33.50f, 2,"Balon molten No.5");
+        //Constructor con parametros necesarios
+        PersonaDTO Xavier = new PersonaDTO ("Xavier", 20, "9611260055", "Xavier@correo.ler.uam.mx");
+        
+        //Constructor con todos los parametros
+        PersonaDTO Rogelio = new PersonaDTO ("Rogelio", "Toluca", 22, "5530385169", "Rogelio@correo.ler.uam.mx");
+        
+        Juan.despliega(); //Despliega datos
+        Xavier.despliega();
+        Rogelio.despliega();
+        
+     //CREAR OBJETOS DE TIPO CatalogoDTO
+        
+        //Constructor default
+        CatalogoDTO pelota= new CatalogoDTO();
+        
+        //Constructor con parametros necesarios
+        CatalogoDTO balon=new CatalogoDTO("W7831",'A', 45.50f, 3);
+        
+        //Constructor con todos los parametros
+        CatalogoDTO fronton=new CatalogoDTO("B2781",'C', 85.50f, 2,"Pelota de esponja para fronton");
     
-        raqueta.despliega();
-        pelota.despliega();
+        pelota.despliega(); //Despliega datos
         balon.despliega();
+        fronton.despliega();
+        
+      //Creación de objetos de tipo ServicioDTO.
+
+        //Constructor default
+        ServiciosDTO servicio1 = new ServiciosDTO ();
+
+        //Constructor con parametros necesarios
+        ServiciosDTO servicio2 = new ServiciosDTO ("S1","Kickboxing", 25);
+        
+        //Constructor con todos los parametros
+        ServiciosDTO servicio3 = new ServiciosDTO ("S4", "Futbol", "Futbol rapido", "Lun-Vier de 2-3 pm", 25, "Unidad deportiva");
+
+        servicio1.despliega(); //Despliega datos
+        servicio2.despliega();
+        servicio3.despliega();
     }
 }
 
